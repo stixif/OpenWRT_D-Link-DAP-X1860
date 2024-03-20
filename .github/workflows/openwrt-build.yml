@@ -45,7 +45,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        sudo apt --fix-missing update
+        #sudo apt --fix-missing update
         sudo apt-get update
         sudo apt-get install -f -y \
           build-essential \
