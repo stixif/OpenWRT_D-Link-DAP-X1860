@@ -9,7 +9,7 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: master
-  OpenWRTDevice: Netgear-ex7300
+  OpenWRTDevice: D-Link-DAP-X1860
   CONFIG_FILE: .config
   TZ: Europe/Berlin
 
