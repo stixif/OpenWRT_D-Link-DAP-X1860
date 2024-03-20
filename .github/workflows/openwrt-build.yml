@@ -16,7 +16,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
@@ -45,10 +45,9 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        #sudo apt-get update
-        #sudo apt-get upgrade -y
-        sudo apt-get update --fix-missing -y
-        sudo apt-get install -y \
+        sudo apt --fix-missing update
+        sudo apt-get update
+        sudo apt-get install -f -y \
           build-essential \
           clang \
           flex \
