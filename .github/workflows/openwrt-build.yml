@@ -8,7 +8,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-23.05
   OpenWRTDevice: D-Link-DAP-X1860
   CONFIG_FILE: .config
   TZ: Europe/Berlin
