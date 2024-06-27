@@ -17,8 +17,8 @@ jobs:
       - name: Delete Old Releases
         uses: dev-drprasad/delete-older-releases@v0.3.4 # Prüfe, ob es eine neuere Version gibt
         with:
-          keep_latest: 3
-          delete_expired_data: 10
+          keep_latest: 8
+          delete_expired_data: 30
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -27,7 +27,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
-          retain_days: 15
+          retain_days: 30
           keep_minimum_runs: 5
           
       - name: Delete cancelled, failed, or skipped workflow runs older than 1 day
@@ -37,7 +37,7 @@ jobs:
           delete_run_by_conclusion_pattern: cancelled, failure, skipped
           repository: ${{ github.repository }}
           retain_days: 1
-          keep_minimum_runs: 1
+          keep_minimum_runs: 0
 
       - name: Delete unused Tags
         uses: fabriziocacicia/delete-tags-without-release-action@v0.1.0 # Prüfe, ob es eine neuere Version gibt
